@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng Nhập</title>
+  <style>
+    body { font-family: 'Arial', sans-serif; background-color: #fff7e6; }
+    .container {
+      max-width: 400px;
+      margin: 80px auto;
+      background-color: #ffecd2;
+      padding: 30px;
+      border: 3px solid #8b5e3c;
+      border-radius: 12px;
+    }
+    h2 { text-align: center; }
+    label { display: block; margin-top: 20px; }
+    input[type="text"], input[type="password"] {
+      width: 95%;
+      padding: 8px;
+      border: 2px solid #d8b28d;
+      border-radius: 5px;
+      background-color: #fffaf0;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      background-color: #d87c3d;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+    }
+    button:hover { background-color: #b8652f; }
+    .note { text-align: center; margin-top: 15px; font-size: 14px; }
+    .note a { color: #ff7700; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Đăng Nhập</h2>
+    <form action="#" method="post">
+      <label for="username">Tên đăng nhập</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Mật khẩu</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Đăng Nhập</button>
+    </form>
+    <div class="note">
+      Chưa có tài khoản? <a href="dangki.html">Đăng ký</a>
+      <br>
+      <a href="trangchu.html">Về Trang Chủ</a>
+    </div>
+  </div>
+</body>
+</html>

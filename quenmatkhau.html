@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đổi Mật Khẩu</title>
+  <style>
+    body { font-family: 'Arial', sans-serif; background-color: #fff7e6; }
+    .container {
+      max-width: 400px;
+      margin: 80px auto;
+      background-color: #ffecd2;
+      padding: 30px;
+      border: 3px solid #8b5e3c;
+      border-radius: 12px;
+    }
+    h2 { text-align: center; }
+    label { display: block; margin-top: 20px; }
+    input[type="password"],input[type="text"] {
+      width: 95%;
+      padding: 8px;
+      border: 2px solid #d8b28d;
+      border-radius: 5px;
+      background-color: #fffaf0;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      background-color: #d87c3d;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+    }
+    button:hover { background-color: #b8652f; }
+    .note { text-align: center; margin-top: 15px; font-size: 14px; }
+    .note a { color: #ff7700; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Đổi Mật Khẩu</h2>
+    <form action="#" method="post">
+        <label for="user">Tài Khoản</label>
+        <input type="text" id="user" name="user" required>
+
+        <label for="old_password">Mật khẩu cũ</label>
+        <input type="password" id="old_password" name="old_password" required>
+
+        <label for="new_password">Mật khẩu mới</label>
+        <input type="password" id="new_password" name="new_password" required>
+
+        <label for="confirm_password">Nhập lại mật khẩu mới</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+
+        <button type="submit">Đổi Mật Khẩu</button>
+    </form>
+    <div class="note">
+      Quay lại <a href="trangchu.html">Trang Chủ</a>
+    </div>
+  </div>
+</body>
+</html>
