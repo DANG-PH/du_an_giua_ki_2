@@ -127,3 +127,7 @@ div#columns figure {
     background-color: #E0AD50 !important; /* màu vàng nhạt giống nút 'Diễn Đàn' */
     color: #561d00 !important;            /* chữ nâu đậm giống khi chọn */
 }
+img {
+        max-width: 100%;
+        height: auto;
+    }
