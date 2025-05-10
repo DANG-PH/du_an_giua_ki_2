@@ -1,64 +1,116 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Đổi Mật Khẩu</title>
-  <style>
-    body { font-family: 'Arial', sans-serif; background-color: #fff7e6; }
-    .container {
-      max-width: 400px;
-      margin: 80px auto;
-      background-color: #ffecd2;
-      padding: 30px;
-      border: 3px solid #8b5e3c;
-      border-radius: 12px;
-    }
-    h2 { text-align: center; }
-    label { display: block; margin-top: 20px; }
-    input[type="password"],input[type="text"] {
-      width: 95%;
-      padding: 8px;
-      border: 2px solid #d8b28d;
-      border-radius: 5px;
-      background-color: #fffaf0;
-    }
-    button {
-      margin-top: 20px;
-      width: 100%;
-      padding: 10px;
-      background-color: #d87c3d;
-      border: none;
-      color: white;
-      font-size: 16px;
-      border-radius: 6px;
-    }
-    button:hover { background-color: #b8652f; }
-    .note { text-align: center; margin-top: 15px; font-size: 14px; }
-    .note a { color: #ff7700; text-decoration: none; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DỰ ÁN GIỮA KỲ</title>
+    <link rel="stylesheet" href="css/template.css" type="text/css" />
+    <link rel="icon" href="/images/kk.png" type="image/png" />
+    <style>
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 83%;
+            padding: 8px;
+            border: 2px solid #d8b28d;
+            border-radius: 5px;
+            background-color: #fffaf0;
+        }
+
+        .button2 {
+            margin-top: 20px;
+            width: 86%;
+            padding: 10px;
+            background-color: #9f5424;
+            border: none;
+            color: #ffcf9c ;
+            font-size: 16px;
+            border-radius: 6px;
+            font-weight: bold;
+           
+        }
+
+        button:hover {
+            background-color: #E0AD50;
+            color: #561d00;
+        }
+
+        .note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h2>Đổi Mật Khẩu</h2>
-    <form action="#" method="post">
-        <label for="user">Tài Khoản</label>
-        <input type="text" id="user" name="user" required>
+    <div>
+        <div style="line-height: 10px; font-size: 10px; padding-right: 5px; padding-bottom: 2px; color: #424242; margin-top: -6px;">
+            <img height="12" src="18.png" style="vertical-align: middle;" />
+            <span style="vertical-align: middle;">
+                Dành cho người chơi trên 18 tuổi. Chơi quá 180 phút mỗi ngày sẽ hại sức khỏe.
+            </span>
+        </div>
 
-        <label for="old_password">Mật khẩu cũ</label>
-        <input type="password" id="old_password" name="old_password" required>
+        <div class="body-content">
+            <div>
+                <div class="a" align="center">
+                    <a href="#"><img src="images/kk.png" width="90" height="85" /></a><br>
+                </div>
 
-        <label for="new_password">Mật khẩu mới</label>
-        <input type="password" id="new_password" name="new_password" required>
+                <div>
+                    <div>
+                        <div class="h" align="center">
+                            <div class="bg_noel"></div>
 
-        <label for="confirm_password">Nhập lại mật khẩu mới</label>
-        <input type="password" id="confirm_password" name="confirm_password" required>
+                            <div style="background: #561d00;">
+                                <table width="100%" border="0" cellspacing="4">
+                                    <tr class="menu">
+                                        <td style="border :3px solid #E0AD50"><a href="dangki.html">Quên / Đổi Mật Khẩu</a></td>
+                                        <td style="border :3px solid #9f5424"><a href="diendan.html">Diễn Đàn</a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div style="margin-top :-1px ; text-align: left" class="bg-content auth-buttons">
+                                <form action="doimatkhau.html" method="get" style="display: inline;">
+                                    <button type="submit" class="auth-btn">Đổi Mật Khẩu</button>
+                                </form>
+                                <form action="quenmatkhau.html" method="get" style="display: inline;">
+                                    <button type="submit" class="auth-btn">Quên Mật Khẩu</button>
+                                </form>
+                               
+                            </div>
+                            <div style="margin-top:-4px"class="bg-content">
+                                <h2>Quên Mật Khẩu</h2>
+                                <form action="#" method="post">
+                                    <label for="username" style="margin-left: 40px;">Tài khoản</label>
+                                    <input type="text" id="username" name="username" required style="margin-left: 40px;">
 
-        <button type="submit">Đổi Mật Khẩu</button>
-    </form>
-    <div class="note">
-      Quay lại <a href="index.html">Trang Chủ</a>
+                                    <label for="email" style="margin-left: 40px;">Email</label>
+                                    <input type="email" id="email" name="email" required style="margin-left: 40px;">
+
+                                    
+                                    <button class="button2" style="margin-left: 40px;" type="submit">Gửi mật khẩu mới</button>
+                                </form>
+                                <div class="note">
+                                    Đã có mật khẩu mới? <a href="dangnhap.html">Đăng nhập</a>
+                                    <br>
+                                    <a href="index.html">Về Trang Chủ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </body>
 </html>

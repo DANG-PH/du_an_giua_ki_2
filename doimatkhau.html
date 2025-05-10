@@ -26,7 +26,7 @@
             background-color: #fffaf0;
         }
 
-        button {
+        .button2 {
             margin-top: 20px;
             width: 86%;
             padding: 10px;
@@ -74,24 +74,39 @@
                             <div style="background: #561d00;">
                                 <table width="100%" border="0" cellspacing="4">
                                     <tr class="menu">
-                                        <td id="selected"><a href="dangnhap.html">Đăng Nhập</a></td>
-                                        <td><a href="diendan.html">Diễn Đàn</a></td>
+                                        <td style="border :3px solid #E0AD50"><a href="dangki.html">Quên / Đổi Mật Khẩu</a></td>
+                                        <td style="border :3px solid #9f5424"><a href="diendan.html">Diễn Đàn</a></td>
                                     </tr>
                                 </table>
                             </div>
-                            <div class="bg-content">
-                                <h2>Đăng Nhập</h2>
+                            <div style="margin-top :-1px ; text-align: left" class="bg-content auth-buttons">
+                                <form action="doimatkhau.html" method="get" style="display: inline;">
+                                    <button type="submit" class="auth-btn">Đổi Mật Khẩu</button>
+                                </form>
+                                <form action="quenmatkhau.html" method="get" style="display: inline;">
+                                    <button type="submit" class="auth-btn">Quên Mật Khẩu</button>
+                                </form>
+                               
+                            </div>
+                            <div style="margin-top:-4px"class="bg-content">
+                                <h2>Đổi Mật Khẩu</h2>
                                 <form action="#" method="post">
-                                    <label for="username" style="margin-left: 40px;">Tên đăng nhập</label>
+                                    <label for="username" style="margin-left: 40px;">Tài khoản</label>
                                     <input type="text" id="username" name="username" required style="margin-left: 40px;">
 
-                                    <label for="password" style="margin-left: 40px;">Mật khẩu</label>
-                                    <input type="password" id="password" name="password" required style="margin-left: 40px;"> 
+                                    <label for="email" style="margin-left: 40px;">Nhập mật Khẩu</label>
+                                    <input type="email" id="email" name="email" required style="margin-left: 40px;">
 
-                                    <button style="margin-left: 40px;" type="submit">Đăng Nhập</button>
+                                    <label for="password" style="margin-left: 40px;">Nhập mật khẩu mới</label>
+                                    <input type="password" id="password" name="password" required style="margin-left: 40px;">
+
+                                    <label for="confirm_password" style="margin-left: 40px;">Nhập lại mật khẩu mới</label>
+                                    <input type="password" id="confirm_password" name="confirm_password" required style="margin-left: 40px;"> 
+
+                                    <button class="button2" style="margin-left: 40px;" type="submit">Đổi mật khẩu</button>
                                 </form>
                                 <div class="note">
-                                    Chưa có tài khoản? <a href="dangki.html">Đăng ký</a>
+                                    Đã đổi mật khẩu? <a href="dangnhap.html">Đăng nhập</a>
                                     <br>
                                     <a href="index.html">Về Trang Chủ</a>
                                 </div>
