@@ -94,7 +94,19 @@
                                     <label for="confirm_password" style="margin-left: 40px;">Nhập lại mật khẩu</label>
                                     <input type="password" id="confirm_password" name="confirm_password" required style="margin-left: 40px;"> 
 
-                                    <button style="margin-left: 40px;" type="submit">Đăng Ký</button>
+                                    <select id="province" name="province" style="margin-left: 40px;margin-top:20px;background-color: #fffaf0;width:86%;height:30px">
+                                        <option value="" style="background-color: #fffaf0;">-- Chọn máy chủ --</option>
+                                        <option value="phongquoc"style="background-color: #fffaf0;">Mondstadt</option>
+                                        <option value="nhamquoc"style="background-color: #fffaf0;">Liyue</option>
+                                        <option value="loiquoc"style="background-color: #fffaf0;">Inazuma</option>
+                                        <option value="thuyquoc"style="background-color: #fffaf0;">Fontain</option>
+                                        <option value="hoaquoc"style="background-color: #fffaf0;">Natlan</option>
+                                        <option value="bangquoc"style="background-color: #fffaf0;">Snezhnaya</option>
+                                    </select>
+                                    
+                                </form>
+                                <form action="dangkithanhcong.html" method="get">
+                                    <button type="submit"style="margin-left: 40px;" >Đăng Ký</button>
                                 </form>
                                 <div class="note">
                                     Đã có tài khoản? <a href="dangnhap.html">Đăng nhập</a>
