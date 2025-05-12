@@ -1,35 +1,10 @@
 body {
     background: #fff7e6;;
     max-width: 630px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
+    margin:auto;
+    padding: 10px;
     font-family: Arial;
     font-size: 9pt;
-}
-
-div.body {
-    background: #ffcf9c;
-    background-position: right bottom;
-    margin-top: 0.2px;
-    border: 2px solid #663019;
-}
-
-.bg-content {
-    text-align: left;
-    padding: 3px;
-    margin-bottom: 3px;
-    background: #eee5cd;
-    background-position: right bottom;
-    margin-top: 0.2px;
-    border: 2px solid #663019;
-    padding-top: 3px;
-    color: #000;
-}
-
-a {
-    color: #ff7700;
-    text-decoration: none;
 }
 
 .body-content {
@@ -38,93 +13,81 @@ a {
     margin-left: 0px;
     margin-bottom: -27px;
 }
+.bg-content {
+    text-align: left;
+    padding: 3px;
+    background: #eee5cd;
+    border: 2px solid #663019;
+    padding-top: 3px;
+}
+
+a {
+    color: #ff7700;
+    text-decoration: none;
+}
+
 
 .footer {
     background: url(../images/bg_bottom.png) #a46c54 repeat-x;
-    position: absolute;
     width: 100%;
     height: 72px;
     background-position: center bottom;
-    border-radius: 6px;
+   
 }
 
 .right_b_bottom {
-    position: relative;
-    z-index: 2;
-    background-position: right;
-    width: 100%;
-    margin-top: -5px;
+    margin-top: 1px;
 }
 
 .copyright {
-    position: relative;
-    z-index: 3;
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
+    margin:auto;
     text-align: center;
-    color: #000;
     font-size: 10px;
+    margin-top:-75px;
 }
 
 tr.menu td,
 tr.menu td a {
     color: #ffcf9c;
-    font-weight: none;
-    text-decoration: none;
     text-align: center;
-    vertical-align: bottom;
-    padding-left: 0;
+}
+
+tr.menu td,
+td#selected {
+    width: 16.6%;
+    background-color: #9f5424;
 }
 
 td#selected a {
     color: #561d00;
 }
 
-tr.menu td,
-td#selected {
-    width: 20%;
-    background-color: #9f5424;
-}
-
 td#selected {
     background: #E0AD50;
 }
 
-.h .bg_noel {
+.bg_noel {
     height: 47px;
     background: url(../images/bg_bottom.png) ;
     margin-top: -40px;
-    z-index: 0;
-    position: relative;
-}
-
-div#columns figure {
-    margin: 0 2px 0px;
-    transition: opacity .4s ease-in-out;
-    display: inline-block;
 }
 
 .auth-buttons {
-
     text-align: center;
-    margin-top: 10px;
 }
 
 .auth-btn {
-    display: inline-block;
-    background-color: #9f5424 !important; /* màu giống các nút bình thường */
-    color: #ffcf9c !important;            /* chữ vàng nhạt */
+
+    background-color: #9f5424 ; 
+    color: #ffcf9c ;            
     padding: 5px 12px;
     margin: 0 5px;
-    border: 2px solid #663019 !important;
-    text-decoration: none;
+    border: 2px solid #663019 ;
     font-weight: bold;
     border-radius: 3px;
     font-size: 10pt;
 }
-
 .auth-btn:hover {
-    background-color: #E0AD50 !important; /* màu vàng nhạt giống nút 'Diễn Đàn' */
-    color: #561d00 !important;            /* chữ nâu đậm giống khi chọn */
+    background-color: #E0AD50 ; 
+    color: #561d00 ;            
 }
