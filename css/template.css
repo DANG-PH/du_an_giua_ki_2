@@ -189,3 +189,35 @@ blockquote:hover {
         opacity: 0;
     }
 }
+@keyframes anvideo1 {
+    0%, 35% { opacity: 1; }
+    40%, 100% { opacity: 0; }
+}
+
+@keyframes anvideo2 {
+    0%, 35% { opacity: 0; }
+    40%, 100% { opacity: 1; }
+}
+@keyframes ananh1{
+    0%,33%{ opacity:1;}
+    35%,66% { opacity:0;}
+    68%,100% { opacity:0;}
+}
+@keyframes ananh2{
+    0%,33%{ opacity:0;}
+    35%,66% { opacity:1;}
+    68%,100% { opacity:0;}
+}
+@keyframes ananh3{
+    0%,33%{ opacity:0;}
+    35%,66% { opacity:0;}
+    68%,100% { opacity:1;}
+}
+@keyframes anh1 {
+    0%,45%{opacity:1;}
+    50%,100%{opacity:0;}
+}
+@keyframes anh2 {
+    0%,45%{opacity:0;}
+    50%,100%{opacity:1;}
+}
