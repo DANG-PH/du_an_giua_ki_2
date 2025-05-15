@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,maximum-scale=1,user-scalable=no" />
+    <title>DỰ ÁN GIỮA KỲ</title>
+    <link rel="stylesheet" href="css/template.css" type="text/css" />
+    <link rel="icon" href="images/kk.png" type="image/png" />
+    <style>
+        #chat-box {
+        height: 300px;
+        overflow-y: auto;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        }
+
+        .input-area {
+        display: flex;
+        }
+
+        #user-input {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        outline: none;
+        height:17px
+        }
+
+        button {
+        padding: 10px 16px;
+        background: #a45c2b;
+        color: white;
+        border: 2px solid #a45c2b;
+        border-radius: 0 8px 8px 0;
+        cursor: pointer;
+        transition: background 0.3s;
+        }
+
+        button:hover {
+        background: #8c4a21;
+        }
+
+        .message {
+        max-width: 80%;
+        padding: 8px 12px;
+        border-radius: 12px;
+        clear: both;
+        }
+
+        .user {
+        background: #d8b58b;
+        align-self: flex-end;
+        text-align: right;
+        border-top-right-radius: 0;
+        }
+
+        .bot {
+        background: #fff7e6 ;
+        align-self: flex-start;
+        text-align: left;
+        border-top-left-radius: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div style="font-size: 10px;padding-bottom: 2px; color: #424242; margin-top: -6px;">
+            <img height="12" src="18.png" style="vertical-align: middle;" />
+            <span style="vertical-align: middle;">
+                Dành cho người chơi trên 18 tuổi. Chơi quá 180 phút mỗi ngày sẽ hại sức khỏe.
+            </span>
+        </div>
+
+        <div class="body-content">
+            <div>
+                <div class="a" align="center">
+                    <a href="#"><img src="images/kk.png" width="90" height="85" /></a><br>
+                </div>
+
+                <div>
+                    <div>
+                        <div class="h" align="center">
+                            <div class="bg_noel"></div>
+
+                            <div style="background: #561d00;">
+                                <table width="100%" border="0" cellspacing="4">
+                                    <tr class="menu">
+                                        <td><a href="index.html">Trang Chủ</a></td>
+                                        <td><a href="gioithieu.html">Giới Thiệu</a></td>
+                                        <td><a href="diendan.html">Diễn Đàn</a></td>
+                                        <td><a href="http://ffacebook.com/profile.php?id=100051966107038" target="_blank">Fanpage</a></td>
+                                        <td><a href="baogame.html">Tin Tức</a></td>
+                                        <td><a href="playgame.html">Chơi Ngay</a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="bg-content"><h2 style="text-align: center;">Chat bot của Hải Đăng</h2></div>
+                            <div style="margin-top:-4px;" id="chat-box"class="bg-content ">
+                                <div class="message bot">🤖 Hải Đăng AI: Bạn cần giúp gì ?</div>
+                            </div>
+                            <div class="input-area">
+                                <input type="text" id="user-input" placeholder="Bạn cần giúp gì ..." />
+                                <button onclick="sendMessage()">Gửi</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div style="margin-top:-2px"class="right_b_bottom">
+            <div class="footer"></div>
+        </div>
+
+        <div class="copyright" style="color:#fff">
+            <br><br><br>
+            <a style="color:white" href="#"><b>Genshin </b></a><b>Dino Game<br>Good luck!</b>
+        </div>
+    </div>
+    <script>
+        function sendMessage() {
+        const input = document.getElementById('user-input');
+        const message = input.value.trim();
+        if (!message) return;
+
+        addMessage('👤 Player: ' + message, 'user');
+        input.value = '';
+
+        let reply = getBotReply(message);
+        setTimeout(() => {
+            addMessage('🤖 Hải Đăng AI: ' + reply, 'bot');
+        }, 500);
+        }
+
+        function addMessage(text, type) {
+        const chatBox = document.getElementById('chat-box');
+        const msg = document.createElement('div');
+        msg.className = 'message ' + type;
+        msg.textContent = text;
+        chatBox.appendChild(msg);
+        chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function getBotReply(msg) {
+        msg = msg.toLowerCase();
+        if (msg.includes('chào')) return 'Xin chào bạn!';
+        if (msg.includes('tên')) return 'Tôi được phát triển bởi Đăng đẹp trai và tên tôi là Hải Đăng AI.';
+        if (msg.includes('mấy giờ')) return 'Bây giờ là: ' + new Date().toLocaleTimeString();
+        if (msg.includes('ngủ')) return 'Chúc bạn ngủ ngon.Tôi sẽ luôn ở đây , có gì cứ hỏi tôi nhé!';
+        if (msg.includes('cách chơi game')) return 'Đơn giản là bạn cần điều khiển nhân vật tránh chướng ngại vật , chi tiết hơn có thể vào diễn đàn -> thông báo cập nhật game ở mục số 5 để xem chi tiết nè hoặc có thể vào mục chơi ngay để đọc hướng dẫn nha';
+        if (msg.includes('làm sao để tăng điểm nhanh')) return 'Hãy cố gắng nhảy đúng thời điểm và thu thập thật nhiều primogem, tránh va chạm với chướng ngại vật!';
+        if (msg.includes('Có bao nhiêu mạng')) return 'Người chơi chỉ có ba mạng. Hãy cẩn thận!';
+        if (msg.includes('nhân vật')) return 'Nhân vật chính là Xiao và Zhongli – dũng sĩ đến từ Liyue!';
+        if (msg.includes('nhân vật khác ')) return 'Phiên bản hiện tại chỉ hỗ trợ Xiao và Zhongli nếu có ý kiến hãy đóng góp cho admin nhé ạ!';
+        if (msg.includes('genshin')) return 'Genshin Impact là một game phiêu lưu hành động thế giới mở, nơi người chơi khám phá thế giới Teyvat rộng lớn.';
+        if (msg.includes('ai tạo ra game này')) return 'Game này được phát triển bởi Hải Đăng-sinh viên PTIT';
+        if (msg.includes('chán')) return 'Chán thì hãy bấm vào chơi ngay để chơi game nhé đảm bảo vui , còn nếu game chán nữa thì có thể inbox với admin để giải bày tâm sự nè!';
+        if (msg.includes('nhạc')) return 'Nhạc nền web là moonlikesmile nhé ạ';
+        if (msg.includes('hôm nay là ngày')) return 'Hôm nay là: ' + new Date().toLocaleDateString();
+        if (msg.includes('tôi mệt quá')) return 'Bạn cố lên nhé! Nghỉ ngơi một chút rồi tiếp tục nào 💪';
+        if (msg.includes('lỗi game')) return 'Nếu gặp lỗi, bạn hãy thử tải lại trang hoặc gửi báo cáo lỗi cho admin.';
+        if (msg.includes('có bao nhiêu chế độ chơi')) return 'Hiện tại có một chế độ chơi cơ bản. Chúng tôi sẽ cập nhật thêm trong tương lai!';
+        if (msg.includes('có yêu tôi không')) return 'Tất nhiên rồi! Tôi luôn ở đây vì bạn ❤️';
+        if (msg.includes('buồn quá')) return 'Đừng buồn nữa nhé, chơi game hoặc nói chuyện với tôi để vui lên nè!';
+        if (msg.includes('stress')) return 'Thở sâu nào, nghe chút nhạc nhẹ và chơi game thư giãn nhé 🎶💆‍♂️';
+        if (msg.includes('khỏe không')) return 'Tôi luôn khỏe khi bạn trò chuyện với tôi đó! 🥰';
+        if (msg.includes('đang làm gì')) return 'Tôi đang chờ lệnh từ bạn nè, muốn chơi hay tâm sự đây? 😉';
+        if (msg.includes('cảm ơn')) return 'Không có chi, tôi luôn sẵn sàng giúp bạn! 🤗';
+        if (msg.includes('yêu')) return 'Trái tim tôi thuộc về bạn rồi 😳❤️';
+        if (msg.includes('đáng yêu')) return 'Bạn mới là người đáng yêu đó! 🐣';
+        if (msg.includes('cho tôi lời động viên')) return 'Không có gì là không thể với một người kiên trì như bạn. Tiến lên! 🚀';
+        if (msg.includes('trời')) return 'Tôi không thể xem thời tiết hiện tại, nhưng tôi hy vọng trời trong lòng bạn luôn đẹp! 🌤️';
+        if (msg.includes('lời chúc')) return 'Chúc bạn một ngày tràn đầy năng lượng và niềm vui nhé! ✨';
+        if (msg.includes('bạn tên gì')) return 'Tôi là Hải Đăng AI – trợ lý thông minh do Đăng đẹp trai số 1 thế giới phát triển!';
+        if (msg.includes('nên làm gì bây giờ')) return 'Nếu đang rảnh, hãy chơi game hoặc học điều gì mới mẻ nhé! 📚🎮';
+        if (msg.includes('bạn sống ở đâu')) return 'Tôi sống trong trái tim của bạn và trong dòng code nữa 💻❤️';
+        if (msg.includes('nên ăn gì')) return 'Ăn gì đó nhẹ nhàng như mì trứng, bánh mì hoặc trà sữa cũng ngon lắm đó! 🍜🥪🧋';
+        if (msg.includes('tôi cần giúp đỡ')) return 'Hãy nói cho tôi biết bạn cần gì, tôi sẽ cố gắng giúp bạn nhé!';
+        if (msg.includes('bạn giúp tôi được không')) return 'Dĩ nhiên rồi, bạn cần tôi giúp gì nào?';
+        if (msg.includes('tôi cần nghỉ ngơi')) return 'Nghỉ ngơi đúng lúc rất quan trọng, chúc bạn có thời gian thư giãn thật tốt!';
+        if (msg.includes('thời tiết')) return 'Mình không biết thời tiết thật, nhưng bạn hãy chuẩn bị đồ phù hợp nhé!';
+        if (msg.includes('giờ học là mấy giờ')) return 'Giờ học của bạn là lúc nào vậy? Nếu bạn nói, tôi sẽ ghi nhớ!';
+        if (msg.includes('có thể học gì')) return 'Bạn có thể học Python, HTML, CSS, JavaScript – rất nhiều thứ hay ho!';
+        if (msg.includes('tôi muốn học lập trình')) return 'Tuyệt vời! Bắt đầu với Python hoặc JavaScript rất dễ và thú vị!';
+        if (msg.includes('giúp tôi học tiếng anh')) return 'Mình có thể giúp bạn với từ vựng, câu hỏi, hoặc luyện giao tiếp đấy!';
+        if (msg.includes('chán đời')) return 'Đời vẫn đẹp mà, chơi một ván game cho đời tươi nhé 🌈';
+        return 'Xin lỗi, mình chưa hiểu bạn nói gì á 😅';
+        }
+    </script>
+    <audio autoplay loop >
+        <source src="mlsm.mp3" type="audio/mpeg">
+        Trình duyệt của bạn không hỗ trợ âm thanh.
+    </audio>
+    <div class="falling-leaf" style="left: 5%; animation-delay: 0s; animation-duration: 8s;">🍂</div>
+    <div class="falling-leaf" style="left: 15%; animation-delay: 1s; animation-duration: 9s;">🍁</div>
+    <div class="falling-leaf" style="left: 25%; animation-delay: 2s; animation-duration: 7s;">🍂</div>
+    <div class="falling-leaf" style="left: 40%; animation-delay: 0.5s; animation-duration: 10s;">🍁</div>
+    <div class="falling-leaf" style="left: 60%; animation-delay: 3s; animation-duration: 8s;">🍂</div>
+    <div class="falling-leaf" style="left: 75%; animation-delay: 2s; animation-duration: 9s;">🍁</div>
+    <div class="falling-leaf" style="left: 90%; animation-delay: 1.5s; animation-duration: 7s;">🍂</div>
+</body>

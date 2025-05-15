@@ -221,3 +221,18 @@ blockquote:hover {
     0%,45%{opacity:0;}
     50%,100%{opacity:1;}
 }
+#chatbot-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+#chatbot-float img {
+    border-radius: 50%;
+}
+
+#chatbot-float img:hover {
+    transform: scale(1.1);
+}
