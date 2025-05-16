@@ -236,3 +236,42 @@ blockquote:hover {
 #chatbot-float img:hover {
     transform: scale(1.1);
 }
+.modal {
+  position: fixed;
+  z-index: 999;
+  padding-top: 400px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.6); /* nền mờ */
+}
+
+.modal-content {
+  background-color: #fff3de;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 500px;
+  animation: slideIn 0.5s ease;
+  text-align: center;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+@keyframes slideIn {
+  from {transform: translateY(-50px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}

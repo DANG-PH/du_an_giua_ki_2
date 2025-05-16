@@ -10,6 +10,16 @@
 </head>
 
 <body>
+    <div id="announcement-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>🎉 THÔNG BÁO 🎉</h2>
+            <img src="images/xc.png" alt="" style='width:150px'>
+            <p>Chào bạn! Rất vui được đón bạn đến với trang game của mình. </p>
+            <p>Hy vọng bạn sẽ có những phút giây thư giãn và trải nghiệm tuyệt vời!</p>
+        </div>
+    </div>
+
     <div>
         <div style="font-size: 10px;padding-bottom: 2px; color: #424242; margin-top: -6px;">
             <img height="12" src="18.png" style="vertical-align: middle;" />
@@ -203,10 +213,10 @@
         <img src="images/ai.png" alt="Chatbot" style="width:60px; height:60px;">
     </a>
     <script>
-        window.onload = function () {
-            alert("Chào mừng đến với web của Hải Đăng!");
-        };
-    </script>
+function closeModal() {
+  document.getElementById("announcement-modal").style.display = "none";
+}
+</script>
 
 </body>
 
