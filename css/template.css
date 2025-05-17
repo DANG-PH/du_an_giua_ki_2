@@ -1,5 +1,5 @@
 body {
-    background: #fff7e6;;
+    background: #fff7e6;
     max-width: 630px;
     margin:auto;
     padding: 10px;
@@ -274,4 +274,137 @@ blockquote:hover {
 @keyframes slideIn {
   from {transform: translateY(-50px); opacity: 0;}
   to {transform: translateY(0); opacity: 1;}
+}
+/* darkmode */
+body.darkmode {
+    background: #1e140a;
+    color: #f2d8b6;
+}
+
+body.darkmode a {
+    color: #ffa94d;
+}
+
+body.darkmode .body-content {
+    background: #4a2a15;
+    color: #f3d8b6;
+}
+
+body.darkmode .bg-content {
+    background: #3c2a1d;
+    border-color: #5e3a1f;
+    color: #f3dec3;
+}
+
+body.darkmode .footer {
+    background-color: #4a2a15;
+    background-image: url(../images/bg_bottom.png);
+    background-repeat: repeat-x;
+    background-position: center bottom;
+}
+
+body.darkmode .copyright {
+    color: #f2d8b6;
+}
+
+body.darkmode tr.menu td,
+body.darkmode tr.menu td a {
+    color: #f3d8b6;
+}
+
+body.darkmode tr.menu td,
+body.darkmode td#selected {
+    background-color: #5b3a23;
+}
+
+body.darkmode td#selected a {
+    color: #d3a96e;
+}
+
+body.darkmode td#selected {
+    background: #7a552b;
+}
+
+body.darkmode .auth-btn {
+    background-color: #3a1e0c;
+    color: #f2d8b6;
+    border-color: #5e3a1f;
+}
+
+body.darkmode .auth-btn:hover {
+    background-color: #71441f;
+    color: #fdf0dd;
+}
+
+body.darkmode blockquote {
+    background: #4a2e15;
+    border-left-color: #7a552b;
+    color: #dbcba1;
+}
+
+body.darkmode .leaderboard {
+    background-color: #4a2e15;
+    border-color: #7a552b;
+    color: #dbcba1;
+}
+
+body.darkmode .leaderboard th {
+    background-color: #7a552b;
+    color: #f3dec3;
+}
+
+body.darkmode .leaderboard tr:nth-child(2n) {
+    background-color: #5b3a23;
+}
+
+body.darkmode .leaderboard tr:hover {
+    background-color: #6e482b;
+    filter: brightness(1);
+}
+
+body.darkmode .faq-section p {
+    background-color: #3c2a1d;
+    border-left-color: #7a552b;
+    color: #f3dec3;
+}
+
+body.darkmode .modal-content {
+    background-color: #4a2a15;
+    color: #f3dec3;
+}
+body.darkmode h2{
+    color:#f3dec3 !important;
+}
+body.darkmode #darkmode{
+    color:#f3dec3 !important
+}
+body.darkmode .sidebarr{
+    background-color:  #3c2a1d !important ;
+}
+body.darkmode #tinhot{
+    background-color: #6e482b !important;
+}
+.dakm {
+    background-color: #ffe9c4;
+    border: none;
+    font-size: 14px;
+    padding: 2px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.dakm:hover{
+    background-color: #fff7e6;
+    transform: scale(1.05);
+}
+body.darkmode .dakm{
+    background-color: #8B4513;
+    border: none;
+    padding: 2px 12px;
+    font-size: 14px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+body.darkmode .dakm:hover{
+    background-color: #561d00;
+    transform: scale(1.05);
 }

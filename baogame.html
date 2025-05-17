@@ -73,7 +73,7 @@
     <div>
         <div style="font-size: 10px;padding-bottom: 2px; color: #424242; margin-top: -6px;">
             <img height="12" src="18.png" style="vertical-align: middle;" />
-            <span style="vertical-align: middle;">
+            <span id="darkmode" style="vertical-align: middle;">
                 Dành cho người chơi trên 18 tuổi. Chơi quá 180 phút mỗi ngày sẽ hại sức khỏe.
             </span>
         </div>
@@ -87,7 +87,7 @@
                 <div>
                     <div>
                         <div class="h" align="center">
-                            <div class="bg_noel"></div>
+                            <div class="bg_noel" style="display: flex; justify-content: flex-end; align-items: flex-end;"><button class="dakm" id="darkModeBtn"onclick="toggleDarkMode()" >🔆</button></div>
 
                             <div style="background: #561d00;">
                                 <table width="100%" border="0" cellspacing="4">
@@ -102,7 +102,7 @@
                                 </table>
                             </div>
                             <div class="main bg-content">
-                                <div class="sidebar" style="background-color:#eee5cd">
+                                <div class="sidebar sidebarr" style="background-color:#eee5cd">
                                     <b>Danh mục</b>
                                     <ul>
                                         <li><a href="">Hướng dẫn né Primogem</a></li>
@@ -120,7 +120,7 @@
                                 </div>
 
                                 <div class="content-area">
-                                    <div class="highlight-title" style="background-color:#eee5cd">
+                                    <div class="highlight-title sidebarr" style="background-color:#eee5cd">
                                         <img src="images/xiao.png" style="vertical-align:middle" />
                                         <b style="vertical-align:middle">Bài viết nổi bật</b>
                                     </div>
@@ -240,4 +240,15 @@
     <a href="chatbot.html" target="_self" id="chatbot-float">
         <img src="images/ai.png" alt="Chatbot" style="width:60px; height:60px;">
     </a>
+    <script>
+        function toggleDarkMode() {
+        document.body.classList.toggle('darkmode');
+        const btn = document.getElementById("darkModeBtn");
+        if (document.body.classList.contains("darkmode")) {
+            btn.innerText = "🌙";
+        } else {
+            btn.innerText = "🔆";
+        }
+    }
+    </script>
 </body>

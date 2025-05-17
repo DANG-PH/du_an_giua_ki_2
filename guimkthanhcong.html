@@ -21,11 +21,17 @@
     </style>
 </head>
 <body>
-    <div class="body-content h ">
+    <div style="line-height: 10px; font-size: 10px; padding-right: 5px; padding-bottom: 2px; color: #424242; margin-top: -6px;">
+            <img height="12" src="18.png" style="vertical-align: middle;" />
+            <span id="darkmode"style="vertical-align: middle;">
+                Dành cho người chơi trên 18 tuổi. Chơi quá 180 phút mỗi ngày sẽ hại sức khỏe.
+            </span>
+    </div>
+    <div class="body-content ">
         <div class="a" align="center">
             <a href="#"><img src="images/kk.png" width="90" height="85" /></a><br>
         </div>
-        <div class="bg_noel"></div>
+        <div class="bg_noel" style="display: flex; justify-content: flex-end; align-items: flex-end;"><button class="dakm" id="darkModeBtn"onclick="toggleDarkMode()" >🔆</button></div>
         <div class="bg-content" >
             
             <h2>Gửi mật khẩu mới thành công</h2>
@@ -62,5 +68,16 @@
     <a href="chatbot.html" target="_self" id="chatbot-float">
         <img src="images/ai.png" alt="Chatbot" style="width:60px; height:60px;">
     </a>
+    <script>
+        function toggleDarkMode() {
+        document.body.classList.toggle('darkmode');
+        const btn = document.getElementById("darkModeBtn");
+        if (document.body.classList.contains("darkmode")) {
+            btn.innerText = "🌙";
+        } else {
+            btn.innerText = "🔆";
+        }
+        }
+    </script>
 </body>
 </html>

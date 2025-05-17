@@ -29,7 +29,7 @@
         height:17px
         }
 
-        button {
+        .button1 {
         padding: 10px 16px;
         background: #a45c2b;
         color: white;
@@ -39,7 +39,7 @@
         transition: background 0.3s;
         }
 
-        button:hover {
+        .button1:hover {
         background: #8c4a21;
         }
 
@@ -48,6 +48,7 @@
         padding: 8px 12px;
         border-radius: 12px;
         clear: both;
+        color:black !important;
         }
 
         .user {
@@ -70,7 +71,7 @@
     <div>
         <div style="font-size: 10px;padding-bottom: 2px; color: #424242; margin-top: -6px;">
             <img height="12" src="18.png" style="vertical-align: middle;" />
-            <span style="vertical-align: middle;">
+            <span id="darkmode" style="vertical-align: middle;">
                 Dành cho người chơi trên 18 tuổi. Chơi quá 180 phút mỗi ngày sẽ hại sức khỏe.
             </span>
         </div>
@@ -84,7 +85,7 @@
                 <div>
                     <div>
                         <div class="h" align="center">
-                            <div class="bg_noel"></div>
+                            <div class="bg_noel" style="display: flex; justify-content: flex-end; align-items: flex-end;"><button class="dakm" id="darkModeBtn"onclick="toggleDarkMode()" >🔆</button></div>
 
                             <div style="background: #561d00;">
                                 <table width="100%" border="0" cellspacing="4">
@@ -104,7 +105,7 @@
                             </div>
                             <div class="input-area">
                                 <input type="text" id="user-input" placeholder="Bạn cần giúp gì ..." />
-                                <button onclick="sendMessage()">Gửi</button>
+                                <button class="button1" onclick="sendMessage()">Gửi</button>
                             </div>
                         </div>
                     </div>
@@ -207,4 +208,15 @@
     <div class="falling-leaf" style="left: 60%; animation-delay: 3s; animation-duration: 8s;">🍂</div>
     <div class="falling-leaf" style="left: 75%; animation-delay: 2s; animation-duration: 9s;">🍁</div>
     <div class="falling-leaf" style="left: 90%; animation-delay: 1.5s; animation-duration: 7s;">🍂</div>
+    <script>
+        function toggleDarkMode() {
+        document.body.classList.toggle('darkmode');
+        const btn = document.getElementById("darkModeBtn");
+        if (document.body.classList.contains("darkmode")) {
+            btn.innerText = "🌙";
+        } else {
+            btn.innerText = "🔆";
+        }
+    }
+    </script>
 </body>
