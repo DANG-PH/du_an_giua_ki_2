@@ -408,3 +408,27 @@ body.darkmode .dakm:hover{
     background-color: #561d00;
     transform: scale(1.05);
 }
+@keyframes a1{
+    0%,25%{opacity: 1;}
+    28%,50%{opacity: 0;}
+    53%,75%{opacity: 0;}
+    78%,100%{opacity:0;}
+}
+@keyframes a2{
+    0%,25%{opacity: 0;}
+    28%,50%{opacity: 1;}
+    53%,75%{opacity: 0;}
+    78%,100%{opacity:0;}
+}
+@keyframes a3{
+    0%,25%{opacity: 0;}
+    28%,50%{opacity: 0;}
+    53%,75%{opacity: 1;}
+    78%,100%{opacity:0;}
+}
+@keyframes a4{
+    0%,25%{opacity: 0;}
+    28%,50%{opacity: 0;}
+    53%,75%{opacity: 0;}
+    78%,100%{opacity:1;}
+}
