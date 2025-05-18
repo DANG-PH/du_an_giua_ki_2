@@ -109,16 +109,25 @@
         <img src="images/ai.png" alt="Chatbot" style="width:60px; height:60px;">
     </a>
     <script>
+        window.onload = function () {
+        const isDarkMode = localStorage.getItem("darkmode") === "enabled";
+        if (isDarkMode) {
+            document.body.classList.add("darkmode");
+            const btn = document.getElementById("darkModeBtn");
+            if (btn) btn.innerText = "🌙";
+        }
+    }
         function toggleDarkMode() {
-        document.body.classList.toggle('darkmode');
+        const isDark = document.body.classList.toggle('darkmode');
         const btn = document.getElementById("darkModeBtn");
-        if (document.body.classList.contains("darkmode")) {
+        if (isDark) {
+            localStorage.setItem("darkmode", "enabled");
             btn.innerText = "🌙";
         } else {
+            localStorage.setItem("darkmode", "disabled");
             btn.innerText = "🔆";
         }
-
-        }
+    }
     </script>
 </body>
 

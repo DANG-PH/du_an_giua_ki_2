@@ -210,12 +210,22 @@
     <div class="falling-leaf" style="left: 75%; animation-delay: 2s; animation-duration: 9s;">🍁</div>
     <div class="falling-leaf" style="left: 90%; animation-delay: 1.5s; animation-duration: 7s;">🍂</div>
     <script>
+        window.onload = function () {
+        const isDarkMode = localStorage.getItem("darkmode") === "enabled";
+        if (isDarkMode) {
+            document.body.classList.add("darkmode");
+            const btn = document.getElementById("darkModeBtn");
+            if (btn) btn.innerText = "🌙";
+        }
+    }
         function toggleDarkMode() {
-        document.body.classList.toggle('darkmode');
+        const isDark = document.body.classList.toggle('darkmode');
         const btn = document.getElementById("darkModeBtn");
-        if (document.body.classList.contains("darkmode")) {
+        if (isDark) {
+            localStorage.setItem("darkmode", "enabled");
             btn.innerText = "🌙";
         } else {
+            localStorage.setItem("darkmode", "disabled");
             btn.innerText = "🔆";
         }
     }
