@@ -7,48 +7,264 @@
     <link rel="stylesheet" href="css/template.css" type="text/css" />
     <link rel="icon" href="images/kk.png" type="image/png" />
     <style>
-        h2 {
-            text-align: center;
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        
+        input{
+        border:none;
+        outline: none;
+        }
+        button{
+            border:none;
+        }
+        .cont{
+            overflow:hidden;
+            margin:auto;
+            position: relative;
+            width: 605px;
+            height: 336px;
+            background: #fff3de;
+        }
+        body.darkmode .cont{
+            background: #3c2a1d;;
+        }
+        .form{
+        position: relative;
+        width: 430px;
+        height: 100%;
+        padding: 33px 20px;
+        transition: transform 1.2s ease-in-out;
+        }
+        h2{
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+        }
+        h3{
+        width: 100%;
+        font-size: 15px;
+        text-align: center;
+        }
+        label{
+        display: block;
+        width: 168px;
+        margin: 12px auto 0;
+        text-align: center;
+        }
+        label span{
+        font-size: 10px;
+        font-weight: 600;
+        
+        text-transform: uppercase;
+        }
+        input{
+        display: block;
+        width: 100%;
+        margin-top: 3px;
+        font-size: 12px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #561d0066;
+        text-align: center;
+        background-color:#fff3de;
+        }
+        body.darkmode input{
+            border-bottom: 1px solid #fff3de66;
+            background-color:#3c2a1d;
+        }
+        .button1{
+        display:block;
+        margin: 0 auto;
+        width: 174px;
+        height: 21px;
+        border-radius: 18px;
+        font-size: 10px;
+        cursor: pointer;
+        color:#fff3de;
+        }
+        .submit{
+        margin-top: 23px;
+        margin-bottom: 17px;
+        text-transform: uppercase;
+        font-weight: 600;
+        background: linear-gradient(to right,#fbc531,#e17055);
+        }
+        .submit:hover{
+        background: linear-gradient(to right, #e17055,#fbc531);
+        filter:brightness(1.1);
+        transform: scale(1.05);
+        }
+        .forgot-pass{
+        margin-top: 10px;
+        text-align: center;
+        font-size: 10px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s ;
+        }
+        .forgot-pass:hover{
+        filter:brightness(1.1);
+        transform: scale(1.1);
+        }
+        .social-media img{
+        width: 25px;
+        height: 25px;
+        }
+        .social-media {
+        text-align: center;
+        margin-top: 12px;
+        }
+        .social-media ul{
+        list-style: none;
         }
 
-        label {
-            display: block;
-            margin-top: 20px;
+        .social-media ul li{
+        display: inline-block;
+        cursor: pointer;
+        margin: 15px 14px;
         }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="password"] {
-            width: 83%;
-            padding: 8px;
-            border: 2px solid #d8b28d;
-            border-radius: 5px;
-            background-color: #fffaf0;
+        .sub-cont{
+        overflow:hidden;
+        position: absolute;
+        left: 430px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        padding-left: 175px;
+        background: #fff3de;
+        transition: transform 1.2s ease-in-out;
         }
-
-        .button1 {
-            margin-top: 20px;
-            width: 86%;
-            padding: 10px;
-            background-color: #9f5424;
-            border: none;
-            color: #ffcf9c ;
-            font-size: 16px;
-            border-radius: 6px;
-            font-weight: bold;
-           
+        body.darkmode .sub-cont{
+            background:#3c2a1d;
         }
-
-        .button1:hover {
-            background-color: #E0AD50;
-            color: #561d00;
+        .cont.s-signup .sub-cont{
+          transform:translate3d(-430px, 0, 0);
         }
-
-        .note {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 14px;
+        .img{
+        overflow:hidden;
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 175px;
+        height: 100%;
+        padding-top: 220px;
         }
+        .img:before{
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 605px;
+        height: 100%;
+        animation: changeBg 6s infinite;
+        background-size: cover;
+        transition: transform 1.2s ease-in-out;
+        }
+        @keyframes changeBg {
+        0%, 50% {
+            background-image: url(images/xzl.webp);
+        }
+        52%, 100% {
+            background-image: url(images/xzl3.jpg) ;
+        }
+        }
+        .img:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.3);
+        }
+        .cont.s-signup .img:before{
+          transform:translate3d(430px, 0, 0);
+        }
+        .img-text{
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 100%;
+        padding: 0 14px;
+        text-align: center;
+        color: #fff3de;
+        transition: transform 1.2s ease-in-out;
+        }
+        .img-text h3{
+        margin-bottom: 6px;
+        font-weight: normal;
+        }
+        .img-text p{
+        font-size: 9px;
+        line-height: 1.5;
+        }
+        .img-text.m-in{
+          transform:translateX(-336px);
+        }
+        .cont.s-signup .img-text.m-up{
+          transform:translateX(336px);
+        }
+        .cont.s-signup .img-text.m-in{
+          transform:translateX(0);
+        }
+        .cont.s-signup .sign-in{
+          transition-timing-function:ease-in-out;
+          transition-duration:1.2s; 
+          transform:translate3d(430px, 0, 0);
+        }
+        .img-btn{
+        overflow:hidden;
+        z-index: 1;
+        position: relative;
+        width: 67px;
+        height: 21px;
+        margin: 0 auto;
+        color:  #fff3de;
+        text-transform: uppercase;
+        font-size: 9px;
+        border: 2px solid #fff3de ;
+        border-radius: 25px;
+        cursor: pointer;
+        }
+        .img-btn span{
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        transition: transform 1.2s;
+        }
+        .img-btn span.m-in{
+          transform:translateY(-44px);
+        }
+        .cont.s-signup .img-btn span.m-in{
+          transform:translateY(0);
+        } 
+        .cont.s-signup .img-btn span.m-up{
+          transform:translateY(72px);
+        }
+        .sign-up{
+          transform:translate3d(-605px, 0, 0);
+        }
+        .cont.s-signup .sign-up{
+          transform:translate3d(0, 0, 0);
+        }
+        a{
+            color:black;
+        }
+        a:hover{
+        color: #a46c54;
+        filter:brightness(1.1);
+        transform: scale(1.05);
+        }
+        
     </style>
 </head>
 <body>
@@ -68,44 +284,77 @@
 
                 <div>
                     <div>
-                        <div class="h" align="center">
+                        <div>
                             <div class="bg_noel" style="display: flex; justify-content: flex-end; align-items: flex-end;"><button class="dakm" id="darkModeBtn"onclick="toggleDarkMode()" >🔆</button></div>
 
                             <div style="background: #561d00;">
                                 <table width="100%" border="0" cellspacing="4">
                                     <tr class="menu">
                                         <td id="selected"><a href="dangnhap.html">Đăng Nhập</a></td>
-                                        <td><a href="diendan.html">Diễn Đàn</a></td>
+                                        <td><a href="index.html">Trang Chủ</a></td>
+                                
                                     </tr>
                                 </table>
                             </div>
-                            <div class="bg-content">
-                                <h2>Đăng Nhập</h2>
-                                <form action="#" method="post">
-                                    <label for="username" style="margin-left: 40px;">Tên đăng nhập</label>
-                                    <input type="text" id="username" name="username" required style="margin-left: 40px;">
+                            <div class="cont">
+                                <div class="form sign-in">
+                                    <h2>Đăng Nhập</h2>
+                                    <label>
+                                        <span>Địa chỉ Email</span>
+                                        <input type="email" name="email">
+                                    </label>
+                                    <label>
+                                        <span>Mật khẩu</span>
+                                        <input type="password" name="password">
+                                    </label>
+                                    <button class="submit link1 button1" type="button">Đăng Nhập</button>
+                                    <p class="forgot-pass"><a href="quenmatkhau.html">Quên Mật Khẩu ?</a></p>
 
-                                    <label for="password" style="margin-left: 40px;">Mật khẩu</label>
-                                    <input type="password" id="password" name="password" required style="margin-left: 40px;"> 
+                                    <div class="social-media">
+                                        <ul>
+                                        <li><a href="http://facebook.com/anghai.325820"><img src="images/facebook.png"></a></li>
+                                        <li><a href="http://facebook.com/anghai.325820"><img src="images/twitter.png"></a></li>
+                                        <li><a href="http://facebook.com/anghai.325820"><img src="images/linkedin.png"></a></li>
+                                        <li><a href="http://facebook.com/anghai.325820"><img src="images/instagram.png"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
 
-                                    <label for="province" style="margin-left: 40px;">Chọn Máy Chủ:</label>
-                                    <select id="province" name="province" style="margin-left: 40px;background-color: #fffaf0;width:86%;height:30px">
-                                        <option value="" style="background-color: #fffaf0;">-- Chọn máy chủ --</option>
-                                        <option value="phongquoc"style="background-color: #fffaf0;">Mondstadt</option>
-                                        <option value="nhamquoc"style="background-color: #fffaf0;">Liyue</option>
-                                        <option value="loiquoc"style="background-color: #fffaf0;">Inazuma</option>
-                                        <option value="thuyquoc"style="background-color: #fffaf0;">Fontain</option>
-                                        <option value="hoaquoc"style="background-color: #fffaf0;">Natlan</option>
-                                        <option value="bangquoc"style="background-color: #fffaf0;">Snezhnaya</option>
-                                    </select>
-                                </form>
-                                <form action="gamee.html" method="get">
-                                    <button class="button1"type="submit"style="margin-left: 40px;" >Đăng Nhập</button>
-                                </form>
-                                <div class="note">
-                                    Chưa có tài khoản? <a href="dangki.html">Đăng ký</a>
-                                    <br>
-                                    <a href="index.html">Về Trang Chủ</a>
+                                <div class="sub-cont">
+                                    <div class="img" >
+                                        <div class="img-text m-up">
+                                        <h3>Chưa có tài khoản?</h3>
+                                        <p>Hãy đăng ký và trải nghiệm game cùng Xiao và Zhongli !</p>
+                                        </div>
+                                        <div class="img-text m-in">
+                                        <h3>Sẵn sàng khám phá điều kì diệu?</h3>
+                                        <p>Nếu bạn đã có tài khoản, hãy đăng nhập. Chúng tôi đang chờ bạn!</p>
+                                        </div>
+                                        <div class="img-btn">
+                                        <span class="m-up">Đăng Ký</span>
+                                        <span class="m-in">Đăng Nhập</span>
+                                        </div>
+                                    </div>
+                                    <div class="form sign-up">
+                                        <h2>Đăng Ký</h2>
+                                        <label>
+                                        <span>Tên</span>
+                                        <input type="text">
+                                        </label>
+                                        <label>
+                                        <span>Email</span>
+                                        <input type="email">
+                                        </label>
+                                        <label>
+                                        <span>Mật Khẩu</span>
+                                        <input type="password">
+                                        </label>
+                                        <label>
+                                        <span>Xác nhận mật khẩu</span>
+                                        <input type="password">
+                                        </label>
+                                        <button type="button" class="submit link2 button1">Đăng ký ngay</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -159,6 +408,17 @@
             btn.innerText = "🔆";
         }
     }
+    document.querySelector('.img-btn').addEventListener('click', function()
+	{
+		document.querySelector('.cont').classList.toggle('s-signup')
+	}
+    );
+    document.querySelector('.submit.link1.button1').addEventListener('click', function() {
+        window.location.href = 'gamee.html';
+    });
+    document.querySelector('.submit.link2.button1').addEventListener('click', function() {
+        window.location.href = 'dangkithanhcong.html';
+    });
     </script>
 </body>
 </html>
