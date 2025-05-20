@@ -261,10 +261,25 @@
         }
         a:hover{
         color: #a46c54;
-        filter:brightness(1.1);
+        filter:brightness(1.2);
         transform: scale(1.05);
         }
-        
+        @media screen and (max-width: 600px) {
+        .cont {
+            width: 100%;
+            height: auto;
+            flex-direction: column;
+        }
+
+        .form, .sub-cont, .img {
+            width: 100%;
+            padding: 10px;
+        }
+
+        .img {
+            display: none; 
+        }
+    }
     </style>
 </head>
 <body>
