@@ -14,18 +14,36 @@
         label {
             display: block;
             margin-top: 20px;
+            text-align: center;
         }
 
-        input[type="text"],
-        input[type="email"],
-        input[type="password"] {
+        input[type="text"] {
             width: 94%;
             padding: 8px;
-            border: 2px solid #d8b28d;
-            border-radius: 5px;
-            background-color: #fffaf0;
+            border:none;
+            outline: none;
+            text-align: center;
+            background-color: #eee5cd;
+            border-bottom: 2px solid #561d00;
         }
-
+        body.darkmode input[type="text"]{
+            background-color: #3c2a1d;
+            border-bottom: 2px solid #f3dec3
+        }
+        input[type="email"] {
+            width: 94%;
+            padding: 8px;
+            border:none;
+            outline: none;
+            text-align: center;
+            background-color: #eee5cd;
+            border-bottom: 2px solid #561d00;
+        }
+        body.darkmode input[type="email"]{
+            background-color: #3c2a1d;
+            border-bottom: 2px solid #f3dec3
+        }
+        
         .button1 {
             margin-top: 20px;
             width: 99%;
@@ -49,6 +67,7 @@
             font-size: 14px;
             border-top:2px solid #561d00
         }
+        
         .container {
             margin-top: -4px;
             display: flex;
