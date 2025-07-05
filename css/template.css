@@ -275,7 +275,7 @@ blockquote:hover {
   from {transform: translateY(-50px); opacity: 0;}
   to {transform: translateY(0); opacity: 1;}
 }
-/* darkmode */
+/* darkmodee */
 body.darkmode {
     background: #1e140a;
     color: #f2d8b6;
